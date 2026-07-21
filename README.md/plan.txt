@@ -1,0 +1,32 @@
+Development Roadmap
+
+Phase 1 – Foundation
+✅ Environment setup
+✅ Database connection
+🔜 Package structure
+🔜 Global configuration
+
+Phase 2 – Employee Management
+Employee Entity
+Repository
+Service
+Controller
+CRUD APIs
+
+Phase 3 – Service Management
+Salon Services CRUD
+
+Phase 4 – Appointment Booking
+Booking logic
+Slot generation
+Conflict checking
+
+Phase 5 – Authentication
+Spring Security
+JWT
+Roles (Admin/Customer)
+
+Phase 6 – Frontend
+React
+Tailwind
+API integration

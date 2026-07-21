@@ -1,0 +1,3 @@
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'Hi@17082003!';
+
+./mvnw spring-boot:run
