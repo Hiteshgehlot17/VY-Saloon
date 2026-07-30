@@ -18,9 +18,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/api/employees")
+
+@Tag(
+    name = "Employee Management",
+    description = "APIs for managing salon employees"
+)
+
 public class EmployeeController {
 
     private final EmployeeService employeeService;

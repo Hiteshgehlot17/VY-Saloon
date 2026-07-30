@@ -7,8 +7,17 @@ import org.springframework.web.bind.annotation.*;
 import com.vysaloon.backend.entity.SalonService;
 import com.vysaloon.backend.service.SalonServiceService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping("/api/services")
+
+@Tag(
+    name = "Salon Services",
+    description = "APIs for managing salon services"
+)
+
+
 public class SalonServiceController {
 
     private final SalonServiceService salonServiceService;
