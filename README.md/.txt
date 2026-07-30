@@ -1,3 +1,12 @@
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'Hi@17082003!';
 
 ./mvnw spring-boot:run
+
+ mysql -u root -p
+
+ 
+    "name": "Hitesh",
+    "email": "newhitesh@example.com",
+    "password": "123456",
+
+   

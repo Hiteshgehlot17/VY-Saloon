@@ -8,6 +8,8 @@ import com.vysaloon.backend.dto.UserResponse;
 import com.vysaloon.backend.entity.User;
 import com.vysaloon.backend.service.AuthService;
 import com.vysaloon.backend.util.ApiResponse;
+import com.vysaloon.backend.dto.LoginRequest;
+import com.vysaloon.backend.dto.LoginResponse;
 
 import jakarta.validation.Valid;
 
@@ -38,4 +40,14 @@ return ResponseEntity.ok(
         ApiResponse.success("User registered successfully", response)
 );
     }
+    @PostMapping("/login")
+public ResponseEntity<ApiResponse<LoginResponse>> login(
+        @Valid @RequestBody LoginRequest request) {
+
+    LoginResponse response = authService.login(request);
+
+    return ResponseEntity.ok(
+    ApiResponse.success("Login successful", response)
+);
+}
 }
