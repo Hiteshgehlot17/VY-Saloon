@@ -38,14 +38,29 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Excepti
                 session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 
         .authorizeHttpRequests(auth -> auth
-                .requestMatchers(
-                        "/api/auth/**",
-                        "/swagger-ui/**",
-                        "/v3/api-docs/**")
-                .permitAll()
 
-                .anyRequest()
-                .authenticated())
+        // Public APIs
+        .requestMatchers(
+                "/api/auth/**",
+                "/swagger-ui/**",
+                "/v3/api-docs/**")
+        .permitAll()
+
+        // Employee APIs
+        .requestMatchers("/api/employees/**")
+        .hasRole("ADMIN")
+
+        // Salon Service APIs
+        .requestMatchers("/api/services/**")
+        .hasRole("ADMIN")
+
+        // Appointment APIs
+        .requestMatchers("/api/appointments/**")
+        .hasAnyRole("ADMIN", "CUSTOMER", "EMPLOYEE")
+
+        // Everything else
+        .anyRequest()
+        .authenticated())
 
         .addFilterBefore(
                 jwtAuthenticationFilter,

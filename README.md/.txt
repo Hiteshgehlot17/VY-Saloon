@@ -10,3 +10,10 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'Hi@17082003!';
     "password": "123456",
 
    
+Step 1 ✅ Add Spring Security Roles
+Step 2 ⏳ Restrict APIs using roles
+Step 3 ⏳ Test ADMIN vs CUSTOMER
+Step 4 ⏳ Get logged-in user
+Step 5 ⏳ Customer can view only their appointments
+Step 6 ⏳ Employee can view only assigned appointments
+Step 7 ⏳ Admin dashboard APIs
